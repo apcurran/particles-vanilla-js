@@ -35,7 +35,6 @@ class Particle {
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-    ctx.fillStyle = "#EBF8FF";
     ctx.fill();
   }
 
@@ -84,6 +83,9 @@ class Particle {
 
 // Create particle array
 function init() {
+  // Initial ctx state
+  ctx.fillStyle = "#ebf8ff";
+
   particlesArr = [];
   let numOfParticles = (canvas.height * canvas.width) / 9000;
 
