@@ -22,13 +22,12 @@ window.addEventListener("mousemove", (event) => {
 });
 
 class Particle {
-  constructor(x, y, directionX, directionY, size, color) {
+  constructor(x, y, directionX, directionY, size) {
     this.x = x;
     this.y = y;
     this.directionX = directionX;
     this.directionY = directionY;
     this.size = size;
-    this.color = color;
   }
 
   // Draw individual particle
@@ -95,9 +94,8 @@ function init() {
     let y = Math.floor((Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2));
     let directionX = Math.floor((Math.random() * 2) - 1.5);
     let directionY = Math.floor((Math.random() * 2) - 1.5);
-    const color = "#EBF8FF";
 
-    particlesArr.push(new Particle(x, y, directionX, directionY, size, color));
+    particlesArr.push(new Particle(x, y, directionX, directionY, size));
   }
 }
 
