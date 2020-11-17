@@ -87,14 +87,14 @@ function init() {
   ctx.fillStyle = "#ebf8ff";
 
   particlesArr = [];
-  let numOfParticles = (canvas.height * canvas.width) / 9000;
+  let numOfParticles = Math.floor((canvas.height * canvas.width) / 9000);
 
   for (let i = 0; i < numOfParticles; i++) {
-    let size = (Math.random() * 5) + 1;
-    let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
-    let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
-    let directionX = (Math.random() * 3) - 1.5;
-    let directionY = (Math.random() * 3) - 1.5;
+    let size = Math.floor((Math.random() * 5) + 1);
+    let x = Math.floor((Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2));
+    let y = Math.floor((Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2));
+    let directionX = Math.floor((Math.random() * 2) - 1.5);
+    let directionY = Math.floor((Math.random() * 2) - 1.5);
     const color = "#EBF8FF";
 
     particlesArr.push(new Particle(x, y, directionX, directionY, size, color));
